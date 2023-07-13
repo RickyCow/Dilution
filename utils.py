@@ -13,6 +13,17 @@ def to_table(service, q):
     result = service.search(q).to_table()
     return result
 
+def tables_simbad(service):
+    tables_list = ["basic", "IDS", "IDENT", \
+        "FLUX", "FILTER", "ALLFLUXES",\
+        "OTYPES", "OTYPEDEF", "ALLTYPES", \
+        "AUTHOR","REF", "KEYWORDS","BIBLIO", "HAS_REF", \
+        "mesVar", "mesDistance", "mesDiameter", "mesPM", \
+        "mesVelocities", "mesRot", "mesSPT", "mesPlx", "mesFe_H", \
+        "meslUE", "mesHerschel", "mesXMM", "mesISO", \
+        "H LINK"]
+    return tables_list
+
 class table_info():
     def __init__(self, service, table_name):
         self.service = service
